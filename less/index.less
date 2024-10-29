@@ -1,0 +1,74 @@
+// out: ../css/
+@import "./base";
+
+
+@vw:3.75vw;
+html, body {
+    margin: 0; /* 移除默认的边距 */
+    padding: 0; /* 移除默认的内边距 */
+    width: 100%; /* 确保html和body宽度为100% */
+    height: 100vh; /* body高度设置为视口高度 */
+    overflow: hidden; /* 防止内容溢出 */
+}
+
+.pic {
+    width: 100vw; /* 使用视口宽度，确保图片宽度充满整个屏幕 */
+    height: 100vh; /* 设置高度为视口高度 */
+    background-image: url(../images/微信图片_20241029221415.jpg);
+    background-size: cover; /* 覆盖整个容器，可能会裁剪图片 */
+    background-position: center center; /* 图片居中显示 */
+    background-repeat: no-repeat; /* 防止背景图片重复 */
+}
+
+.text {
+    position: absolute;
+            top: 20%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 80%; /* 根据需要调整宽度 */
+            text-align: center;
+            font-family: '楷体', sans-serif; /* 设置字体 */
+            font-size: 24px; /* 设置字体大小 */
+            color: #333; /* 设置字体颜色 */
+            line-height: 1.6; /* 设置行间距 */
+            // padding: 20px; /* 设置内边距 */
+            border-radius: 10px; /* 设置边框圆角 */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 设置阴影 */
+            // font-weight: bold; /* 加粗文字 */
+}
+
+.bright-text {
+    display: block;
+    color: #f7f7f7; /* 亮颜色 */
+    text-align: left; /* 左对齐 */
+    font-family: '楷体', sans-serif; /* 字体 */
+    font-size: 24px; /* 字号 */
+}
+
+/* 云 */
+.cloud img {
+    position: absolute;
+    left: 50%;
+}
+
+.cloud img:nth-child(1) {
+    margin-left: -100px;
+    top: 20px;
+    animation: cloud 1s infinite alternate linear;
+}
+.cloud img:nth-child(2) {
+    margin-left: 90px;
+    top: 60px;
+    animation: cloud 1s infinite alternate linear 0.4s;
+}
+.cloud img:nth-child(3) {
+    margin-left: -150px;
+    top: 250px;
+    animation: cloud 1s infinite alternate linear 0.6s;
+}
+
+@keyframes cloud {
+    100% {
+        transform: translate(20px);
+    }
+}
